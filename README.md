@@ -1,6 +1,6 @@
 # react-webpack-app
 
-This react app was designed for test out Sentry with the least amount of friction.
+This react app was designed for testing out Sentry with the least amount of friction.
 
 ## Get Started
 ### Step 1: Clone the directory
