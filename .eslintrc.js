@@ -4,6 +4,7 @@ module.exports = {
   },
   extends: ['prettier'],
   overrides: [],
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -11,6 +12,5 @@ module.exports = {
   plugins: ['prettier'],
   rules: {
     'prettier/prettier': ['error'],
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
   },
 };
