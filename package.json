@@ -1,14 +1,14 @@
 {
-	"name": "produce-error",
+	"name": "react-webpack-app",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Built to for users to try out Sentry",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "webpack serve --config webpack.config.js"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Jesse Box <me@jessebox.net> (www.jessebox.net)",
 	"license": "ISC",
 	"devDependencies": {
 		"@babel/core": "^7.20.5",
