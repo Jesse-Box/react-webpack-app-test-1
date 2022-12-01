@@ -1,8 +1,7 @@
 const path = require('path');
 
 const htmlWebPackPlugin = require('html-webpack-plugin');
-const { cleanWebpackPlugin } = require('clean-webpack-plugin');
-const { postcssPresetEnv } = require('postcss-preset-env');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -12,6 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].bundle.js',
+    clean: true,
   },
   module: {
     rules: [
@@ -26,7 +26,18 @@ module.exports = {
       // CSS
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [['postcss-preset-env']],
+              },
+            },
+          },
+        ],
       },
       // Images
       {
@@ -46,7 +57,6 @@ module.exports = {
       template: './src/template.html',
       filename: './index.html',
     }),
-    new cleanWebpackPlugin(),
-    new postcssPresetEnv(),
+    new CleanWebpackPlugin(),
   ],
 };
