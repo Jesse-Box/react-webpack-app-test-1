@@ -1,10 +1,10 @@
 import { createRoot } from 'react-dom/client';
 import React from 'react';
-import * as Sentry from "@sentry/react";
-import { BrowserTracing } from "@sentry/tracing";
+import * as Sentry from '@sentry/react';
+import { BrowserTracing } from '@sentry/tracing';
 
 Sentry.init({
-  dsn: "https://36d476f30112490886ebf7af8a69ce80@o4504792325292032.ingest.sentry.io/4504792408850432",
+  dsn: 'https://0391a7a5b9364d869c76b5b1fbdd18b2@o925438.ingest.sentry.io/4504485362139136',
   integrations: [new BrowserTracing()],
 
   // Set tracesSampleRate to 1.0 to capture 100%
