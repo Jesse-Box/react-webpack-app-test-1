@@ -16,8 +16,10 @@ Sentry.init({
 function App() {
   return (
     <div>
-      <h1>This is my React app!</h1>
-      <button onClick={() => methodDoesNotExist()}>Send Error</button>
+      <h1>This is my super simple React app!</h1>
+      <div>
+        <button onClick={() => methodDoesNotExist()}>Send Error</button>
+      </div>
     </div>
   );
 }
